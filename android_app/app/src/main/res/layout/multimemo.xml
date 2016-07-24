@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#ffffffff"
+	>
+	<RelativeLayout
+		android:id="@+id/titleLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:background="#ffffffff"
+		>
+		<com.handgear.multimemo.common.TitleBackgroundButton
+			android:id="@+id/titleBackgroundBtn"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_alignParentTop="true"
+			android:text="간단 메모"
+			android:textSize="18dp"
+			android:textStyle="bold"
+			/>
+	</RelativeLayout>
+
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_below="@+id/titleLayout">
+
+		<ListView
+			android:id="@+id/memoList"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:divider="#00000000"
+			android:listSelector="#00000000"
+			android:cacheColorHint="#00000000"
+			android:layout_marginLeft="4dp"
+			android:layout_marginRight="4dp"
+			android:layout_marginTop="4dp"
+			android:layout_above="@+id/buttonLayout" />
+
+		<LinearLayout
+			android:id="@+id/buttonLayout"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_alignParentBottom="true"
+			android:gravity="bottom|center_vertical">
+			<LinearLayout
+				android:id="@+id/buttonLayout1"
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal">
+				<com.handgear.multimemo.common.TitleBitmapButton
+					android:id="@+id/newMemoBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="새 메모"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					/>
+				<com.handgear.multimemo.common.TitleBitmapButton
+					android:id="@+id/closeBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
+					android:text="닫기"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					/>
+
+				<com.handgear.multimemo.common.TitleBitmapButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="동기화"
+					android:id="@+id/postBtn"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:layout_marginLeft="10dp"
+					/>
+			</LinearLayout>
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="New Text"
+			android:id="@+id/textView"
+			android:layout_below="@+id/buttonLayout" />
+	</RelativeLayout>
+
+</RelativeLayout>
